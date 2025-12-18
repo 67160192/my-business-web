@@ -1,43 +1,58 @@
 <!DOCTYPE html>
 <html lang="th">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ชื่อหน้าเว็บ</title>
+    <title>เกี่ยวกับเรา</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-</body>
-
-</html>
-
-<body>
-    <header>
-        <h1 style="font-size: 3em;">เรื่องราวเบื้องหลังความอร่อย</h1>
-        <h1 style="font-size: 1em;">KFC ถือกำเนิดขึ้นจากผู้พันแซนเดอร์ส (Colonel Sanders)
-            ผู้คิดค้นสูตรไก่ทอดที่ใช้สมุนไพรและเครื่องเทศ 11
-            ชนิดในปี 1940 เรื่องราวของเราคือความมุ่งมั่นที่จะรักษาคุณภาพและรสชาติที่เป็นเอกลักษณ์นี้ไว้
-            เพื่อให้ทุกชิ้นของไก่ทอด KFC คือการส่งมอบความสุขและความทรงจำที่ดีแก่ลูกค้าทุกคน</h1>
+    <header id="header">
+        <nav>
+            <ul>
+                <li><a href="index.html">หน้าแรก</a></li>
+                <li><a href="about.html">เกี่ยวกับเรา</a></li>
+                <li><a href="service.html">บริการ/สินค้า</a></li>
+                <li><a href="contact.html">ติดต่อ</a></li>
+            </ul>
+        </nav>
     </header>
-    <picture>
-        <source media="(min-width:650px)" srcset="Picture/colonel.png">
-        <source media="(min-width:465px)" srcset="Picture/colonel.png">
-        <img src="Picture/colonel.png" style="width:20%;">
-    </picture>
-    <h1 style="font-size:1em;">ชื่อ: Colonel Sanders</h1>
-    <h1 style="font-size:1em;">ตำแหน่ง: ผู้ก่อตั้งและแรงบันดาลใจ</h1>
-    <h1 style="font-size:1em;">คำอธิบายสั้น ๆ: ชายผู้เชื่อมั่นในสูตรลับจนวินาทีสุดท้าย
-        และทำให้ไก่ทอดของเขากลายเป็นปรากฏการณ์ระดับโลก</h1>
-    <h1 style="font-size:1em;">พันธกิจและวิสัยทัศน์ของเรา</h1>
-    <figcaption>พันธกิจ (Mission): มุ่งมั่นที่จะมอบไก่ทอดคุณภาพระดับโลกและบริการที่รวดเร็ว เป็นมิตร
-        เพื่อให้ลูกค้าทุกคนรู้สึกพึงพอใจและกลับมาอีกครั้ง</figcaption>
-    <figcaption>วิสัยทัศน์ (Vision): เป็นแบรนด์ไก่ทอดอันดับหนึ่งในใจผู้บริโภค ที่ไม่เพียงแต่อร่อย แต่ยังเป็นส่วนหนึ่งในการสร้างความสุขให้กับครอบครัวและสังคม</figcaption>
-  
-    <nav>
-        <ul>
-          <li><a href="index.html">กลับหน้าแรก</a></li>
-        </ul>
-      </nav>
 
+    <main class="container">
+        <section class="section hero-about">
+            <h1 class="page-title">เรื่องราวเบื้องหลังความอร่อย</h1>
+            <h2 class="subtitle">"KFC ถือกำเนิดขึ้นจากตำนานผู้พันแซนเดอร์ส (Colonel Sanders) ผู้คิดค้นสูตรไก่ทอดที่ไม่มีใครเหมือนและเครื่องเทศ 11 ชนิด"</h2>
+        </section>
+
+        <section class="section about-content">
+            <p>ในปี 1940 เขาขอเอาความมุ่งมั่นที่จะรักษาคุณภาพและรสชาติที่เป็นเอกลักษณ์นี้ เพื่อให้กับทุกคนของไก่ทอด KFC คือการส่งมอบความสุขและความทรงจำที่ดีให้ลูกค้าทุกคน</p>
+            
+            <div class="card-grid team">
+                <figure class="team-member">
+                    <picture>
+                        <source media="(min-width:650px)" srcset="Picture/colonel.png">
+                        <img src="Picture/colonel.png" alt="Colonel Sanders">
+                    </picture>
+                    <figcaption>ชื่อ: Colonel Sanders</figcaption>
+                </figure>
+                </div>
+            
+            <h3 class="subsection-heading">คำมั่นสัญญา: ตัวแทนแห่งรสชาติและประสบการณ์ที่น่าจดจำ</h3>
+            <p>ส่วนสำคัญ 9: ผู้ชายที่ยืนยันในรสชาติดั้งเดิมเท่านั้นที่สุดท้ายยุคและนำไปไก่ทอดจากรสชาติที่ปรากฏการณ์ที่สุดในโลก</p>
+
+            <h3 class="subsection-heading">พันธกิจและวิสัยทัศน์</h3>
+            <p>พันธกิจ (Mission): มอบไก่ทอดคุณภาพยอดเยี่ยมในใจคนและอาหารที่รวดเร็ว เป็นเลิศ เพื่อให้ลูกค้าทุกคนมีความสุขและมีรอยยิ้ม</p>
+            <p>วิสัยทัศน์ (Vision): เป็นแบรนด์ไก่ทอดที่มีชื่อเสียงในใจผู้บริโภค ไม่เพียงแค่ยอดขาย แต่ยังเป็นส่วนหนึ่งในการสร้างความสุขให้กับครอบครัวและสังคม</p>
+        </section>
+
+    </main>
+    
+    <footer id="footer">
+        <nav>
+            <ul>
+                <li><a href="index.html">กลับหน้าแรก</a></li>
+            </ul>
+        </nav>
+    </footer>
+</body>
 </html>

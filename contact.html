@@ -1,68 +1,109 @@
+
+</html>
 <!DOCTYPE html>
 <html lang="th">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ชื่อหน้าเว็บ</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ติดต่อเรา</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-  <div style="width: 30%">
-    <fieldset>
-      <legend>Drop the Contact</legend>
-      <label for="fname">ชื่อจริง:</label>
-      <input type="text" id="fname" name="firstname" required />
-      <label for="fname">นามสกุล:</label>
-      <input type="text" id="lname" name="lastname" required />
-      <br><label for="email">อีเมล:</label>
-      <input type="email" id="email" name="email" required />
-      <label for="bdate">วดปเกิด:</label>
-      <input type="date" id="bdate" name="BirthDate" required />
-      <fieldset>
-        <label>เพศ:</label><br>
-        <input type="radio" id="male" name="gender" value="male">
-        <label for="male">ชาย</label>
-        <input type="radio" id="female" name="gender" value="female">
-        <label for="female">หญิง</label>
-        <input type="radio" id="other" name="gender" value="other">
-        <label for="other">อื่นๆ</label><br>
-      </fieldset>
-      <label for="country">ประเทศ:</label>
-      <select id="country" name="country">
-        <option value="">--เลือกประเทศ--</option>
-        <option value="th">ไทย</option>
-        <option value="us">สหรัฐอเมริกา</option>
-      </select>
-      <br><label for="more">ข้อมูลเพิ่มเติม:</label>
-      <br><textarea id="message" name="message" rows="5" cols="40"></textarea>
-      <br><input type="checkbox" id="accpet" name="accpet" required />
-      <label for="accept">ฉันยอมรับเงื่อนไขการใช้บริการ:</label>
-    </fieldset>
-  </div>
-  <section id="contact-info">
-    <h2>ข้อมูลติดต่อ</h2>
+<body>
+    <header id="header">
+        <nav>
+            <ul>
+                <li><a href="index.html">หน้าแรก</a></li>
+                <li><a href="about.html">เกี่ยวกับเรา</a></li>
+                <li><a href="service.html">บริการ/สินค้า</a></li>
+                <li><a href="contact.html">ติดต่อ</a></li>
+            </ul>
+        </nav>
+    </header>
 
-    <address>
-        <p><strong>KFC (Kentucky Fried Chicken) - สำนักงานใหญ่ (สมมติ)</strong></p>
-        <p>เลขที่ 123/45 อาคารไก่ทองคำ</p>
-        <p>ถนนผู้พันแซนเดอร์ส แขวงความอร่อย</p>
-        <p>เขตไก่ทอดร้อนๆ กรุงเทพมหานคร 10100</p>
-        
-        <p><strong>โทรศัพท์:</strong> <a href="tel:+6621234567">02-123-4567</a> (ติดต่อสอบถาม)</p>
-        <p><strong>อีเมล:</strong> <a href="mailto:contact@kfc-th-example.com">contact@kfc-th-example.com</a></p>
-    </address>
+    <main class="container">
+        <section class="section contact-form-section">
+            <h1 class="page-title">ติดต่อเรา</h1>
+            <div class="form-container">
+                <form class="contact-form">
+                    <fieldset class="form-fieldset">
+                        <legend>Drop The Contact</legend>
+                      <div style="width: 30%">
+                        <div class="form-group">
+                            <label for="fname">ชื่อ:</label>
+                            <input type="text" id="fname" name="firstname" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="lname">นามสกุล:</label>
+                            <input type="text" id="lname" name="lastname" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">อีเมล:</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="bdate">วัน/เดือน/ปีเกิด:</label>
+                            <input type="date" id="bdate" name="BirthDate" required>
+                        </div>
+                        
+                        <div class="form-group form-radio-group">
+                            <label>เพศ:</label>
+                            <input type="radio" id="male" name="gender" value="male">
+                            <label for="male">ชาย</label>
+                            <input type="radio" id="female" name="gender" value="female">
+                            <label for="female">หญิง</label>
+                            <input type="radio" id="other" name="gender" value="other">
+                            <label for="other">อื่นๆ</label>
+                        </div>
 
-    <p><strong>เวลาทำการ:</strong></p>
-    <ul>
-        <li>วันจันทร์ - วันศุกร์: 09:00 น. - 18:00 น.</li>
-        <li>วันเสาร์ - วันอาทิตย์: ปิดทำการ (สำหรับสำนักงานใหญ่)</li>
-    </ul>
+                        <div class="form-group">
+                            <label for="country">ประเทศ:</label>
+                            <select id="country" name="country">
+                                <option value="thai" selected>ประเทศไทย</option>
+                                <option value="america">สหรัฐอเมริกา</option>
+                                <option value="us">รัฐอื่น</option>
+                            </select>
+                        </div>
+                      </div>
+                        <div class="form-group">
+                            <label for="message">ข้อความเพิ่มเติม:</label>
+                            <textarea id="message" name="message" rows="5" cols="40"></textarea>
+                        </div>
 
-</section>
+                        <div class="form-group form-checkbox">
+                            <input type="checkbox" id="accept" name="accept" required>
+                            <label for="accept">ยินยอมให้เปิดเผยข้อมูล</label>
+                        </div>
+                        
+                        <button type="submit" class="btn primary-btn">ส่งแบบฟอร์ม</button>
+                    </fieldset>
+                </form>
+            </div>
+        </section>
 
-    <nav>
-        <ul>
-          <li><a href="index.html">กลับหน้าแรก</a></li>
-        </ul>
-      </nav>
+        <section class="section contact-info-section">
+            <h2 class="section-heading">Contact Info</h2>
+            <address>
+                <p><strong>Address:</strong> 123/45 สำนักงานใหญ่ (ถนน) / <br>แขวง <br>จังหวัด กรุงเทพมหานคร 10100</p>
+                <p><strong>โทรศัพท์:</strong> <a href="tel:+6621234567">+662-123-4567 (ติดต่อสอบถาม)</a></p>
+                <p><strong>อีเมล:</strong> <a href="mailto:contact@kfc-th-example.com">contact@kfc-th-example.com</a></p>
+            </address>
+            
+            <div class="working-hours-info">
+                <h3 class="subsection-heading">เวลาทำการ</h3>
+                <ul>
+                    <li><strong>วันจันทร์ - วันศุกร์:</strong> 09:00 น. - 18:00 น.</li>
+                    <li><strong>วันเสาร์ - วันอาทิตย์:</strong> ปิดทำการ (สำหรับสำนักงานใหญ่)</li>
+                </ul>
+            </div>
+        </section>
+    </main>
 
+    <footer id="footer">
+        <nav>
+            <ul>
+                <li><a href="index.html">กลับหน้าแรก</a></li>
+            </ul>
+        </nav>
+    </footer>
+</body>
 </html>

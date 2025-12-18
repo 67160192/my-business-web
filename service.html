@@ -4,69 +4,102 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ชื่อหน้าเว็บ</title>
+    <title>บริการ/สินค้า</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-</body>
-
-</html>
-
-<body>
-    <header>
-        <h1 style="font-size: 3em;">บริการและเมนูพิเศษของเรา</h1>
-        <h1 style="font-size: 2em;">บริการที่ 1: ชุดไก่ทอดซิกเนเจอร์
+    <header id="header">
+        <nav>
+            <ul>
+                <li><a href="index.html">หน้าแรก</a></li>
+                <li><a href="about.html">เกี่ยวกับเรา</a></li>
+                <li><a href="service.html">บริการ/สินค้า</a></li>
+                <li><a href="contact.html">ติดต่อ</a></li>
+            </ul>
+        </nav>
     </header>
-    <h1 style="font-size:1em;">The Original Recipe (สูตรต้นตำรับ)</h1>
-    <h1 style="font-size:1em;">คำอธิบาย: ไก่ทอดร้อน ๆ กรอบนอกนุ่มใน ปรุงด้วยสมุนไพร 11 ชนิด เสิร์ฟพร้อมมันบดและโคลสลอว์
-    </h1>
-    <h1 style="font-size: 2em;">บริการที่ 2: ชุดเบอร์เกอร์และทวิสเตอร์ </header>
-        <h1 style="font-size:1em;">Zinger Burger (ซิงเกอร์เบอร์เกอร์)</h1>
-        <h1 style="font-size:1em;">คำอธิบาย: อกไก่ทอดชิ้นหนาเต็มคำ ประกบด้วยขนมปังนุ่ม ๆ และซอสสูตรเฉพาะ
-            เหมาะสำหรับมื้อด่วนที่ต้องการความอิ่มอร่อย</h1>
-        <h1 style="font-size: 2em;">บริการที่ 3: เมนูทานเล่นและของหวาน</header>
-            <h1 style="font-size:1em;">Fries & Egg Tart (เฟรนช์ฟรายส์และทาร์ตไข่)</h1>
-            <h1 style="font-size:1em;">คำอธิบาย: ของทานเล่นที่ต้องมี พร้อมปิดท้ายด้วยทาร์ตไข่หอมหวาน แป้งกรอบ
-                ไส้คัสตาร์ดนุ่มละมุนลิ้น</h1>
-            <h2>เปรียบเทียบชุดจัดเลี้ยง (Party Packs)</h2>
-            <table id="package-table">
- <thead>
-        <tr>
-            <th>ชุดจัดเลี้ยง</th>
-            <th>ไก่ทอด (ชิ้น)</th>
-            <th>เบอร์เกอร์ (ชิ้น)</th>
-            <th>เครื่องเคียง</th>
-            <th>ราคา (บาท)</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td><strong>Party Pack S</strong></td>
-            <td>10</td>
-            <td>2</td>
-            <td>โคลสลอว์ (เล็ก)</td>
-            <td>599</td>
-        </tr>
-        <tr>
-            <td><strong>Party Pack M</strong></td>
-            <td>15</td>
-            <td>4</td>
-            <td>มันบด (กลาง), โคลสลอว์ (กลาง)</td>
-            <td>899</td>
-        </tr>
-        <tr>
-            <td><strong>Party Pack L</strong></td>
-            <td>25</td>
-            <td>6</td>
-            <td>มันบด (ใหญ่), เฟรนช์ฟรายส์ (ใหญ่)</td>
-            <td>1,499</td>
-        </tr>
-    </tbody>
-</table>
-    <nav>
-        <ul>
-          <li><a href="index.html">กลับหน้าแรก</a></li>
-        </ul>
-      </nav>
+
+    <main class="container">
+        <section class="section product-menu">
+            <h1 class="page-title">รายการเมนูที่แนะนำของเรา</h1>
+
+            <div class="card product-item">
+                <h2 class="section-heading">เมนูที่ 1: ชุดไก่ทอดต้นตำรับ</h2>
+                <h3 class="subsection-heading">อร่อยดั้งเดิม (สูตรลับต้นตำรับ)</h3>
+                <p>คำอธิบาย: ไก่ทอดร้อน ๆ กรอบนอกนุ่มใน พร้อมด้วยสมุนไพร 11 ชนิด เสิร์ฟพร้อมมันบดและโคลสลอว์</p>
+                <picture>
+                    <img src="Picture/เมนู1.png" alt="เมนู1">
+                </picture>
+            </div>
+
+            <div class="card product-item">
+                <h2 class="section-heading">เมนูที่ 2: ชุดเบอร์เกอร์และฟรัยส์เดย์</h2>
+                <h3 class="subsection-heading">Zinger Burger (ซิงเกอร์เบอร์เกอร์)</h3>
+                <p>คำอธิบาย: ไก่กรอบ, ซอสเข้มข้นพร้อมผักสดในเบอร์เกอร์อบอุ่น ๆ และซองสุดอร่อยเฉพาะ</p>
+                <picture>
+                    <img src="Picture/เมนู2.png" alt="เมนู2">
+                </picture>
+            </div>
+
+            <div class="card product-item">
+                <h2 class="section-heading">เมนูที่ 3: เหมาะสำหรับมื้อส่วนตัวหรือการรวมกลุ่มเพื่อน</h2>
+                <h3 class="subsection-heading">Hot Fries & Egg Tart (เฟรนซ์ฟรายส์รสเผ็ดและทาร์ตไข่)</h3>
+                <p>คำอธิบาย: ของหวานที่แสนผ่อนคลาย, มีพร้อมสำหรับคนรักของหวาน และชุดเมนูพิเศษอื่นๆ</p>
+                <picture>
+                    <img src="Picture/เมนู3.png" alt="เมนู3">
+                </picture>
+            </div>
+        </section>
+
+        <section class="section party-packs">
+            <h2 class="section-heading">ชุดพร้อมเสิร์ฟ (Party Packs)</h2>
+            <div class="table-container">
+                <table id="package-table">
+                    <thead>
+                        <tr>
+                            <th>ชุดเครื่อง (สิ่ง)</th>
+                            <th>ไก่ทอด (ชิ้น)</th>
+                            <th>ไก่นักเก็ต (ชิ้น)</th>
+                            <th>เครื่องเคียง/อื่นๆ</th>
+                            <th>ราคา (บาท)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Party Pack S</strong></td>
+                            <td>10</td>
+                            <td>2</td>
+                            <td>TBD</td>
+                            <td>499</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Party Pack M</strong></td>
+                            <td>15</td>
+                            <td>3</td>
+                            <td>ไก่ทอด (กลาง), โคลสลอว์ (กลาง)</td>
+                            <td>899</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Party Pack L</strong></td>
+                            <td>25</td>
+                            <td>6</td>
+                            <td>มันบด (ใหญ่), เฟรนช์ฟรายส์ (ใหญ่)</td>
+                            <td>1,499</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <footer id="footer">
+        <nav>
+            <ul>
+                <li><a href="index.html">กลับหน้าแรก</a></li>
+            </ul>
+        </nav>
+    </footer>
+</body>
 
 </html>

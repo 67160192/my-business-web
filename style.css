@@ -1,0 +1,423 @@
+/* ========================
+ RESET & DEFAULTS (1.ก)
+ ======================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    /* 3.ก. Color Palette */
+    --primary-color: #dd1b1b; /* สีแดงเข้ม (KFC Red) */
+    --secondary-color: #FFC72C; /* สีเหลือง (KFC Yellow/Gold) */
+    --accent-color: #333333; /* สีเทาเข้มสำหรับข้อความ */
+    --neutral-bg: #F5F5F5; /* พื้นหลังสีเทาอ่อน */
+    --text-light: #FFFFFF;
+    --text-dark: #2C2C2C;
+    --border-color: #DDDDDD;
+
+    /* 2.ข. Relative Units - Rem */
+    --base-font-size: 16px; 
+}
+
+html {
+    font-size: var(--base-font-size); /* 2.ข. ตั้ง base font-size */
+    scroll-behavior: smooth;
+}
+
+body {
+    /* 1.ก. */
+    font-family: 'Roboto', 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif; /* 3.ข. Typography */
+    line-height: 1.6; /* 1.ก. line-height */
+    background-color: var(--neutral-bg);
+    color: var(--text-dark);
+}
+
+/* ========================
+ TYPOGRAPHY (3.ข) & ELEMENT SELECTORS (1.ข)
+ ======================== */
+
+h1, h2, h3, h4 {
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+    text-transform: uppercase; /* 3.ค. text-transform */
+    letter-spacing: 0.05rem; /* 3.ค. letter-spacing */
+}
+
+/* 2.ข. Font sizes: ใช้ rem */
+h1 {
+    font-size: 2.5rem; /* 1.ข. h1: page title (hero section) */
+    color: var(--text-dark); /* ให้สีขาวเฉพาะใน Hero Section, จะ override ใน .container */
+}
+
+h2 {
+    font-size: 1.8rem; /* 1.ข. h2: section heading */
+    color: var(--primary-color);
+}
+
+h3 {
+    font-size: 1.4rem; /* 1.ข. h3: subsection */
+    color: var(--accent-color);
+}
+
+p {
+    line-height: 1.7; /* 1.ข. line-height ≥ 1.5 */
+    margin-bottom: 1rem;
+}
+
+/* 1.ข. Link Styling & 3.ค. Link Styling */
+a {
+    color: var(--primary-color);
+    text-decoration: none; /* ลบ underline ปกติ */
+    transition: color 0.3s ease;
+}
+
+a:hover { /* 1.ข. hover effect */
+    color: var(--secondary-color);
+    text-decoration: underline; /* เพิ่ม underline เมื่อ hover */
+}
+
+img {
+    max-width: 100%; /* 2.ค. Images */
+    height: auto;
+    display: block;
+}
+
+/* ========================
+ LAYOUT & CONTAINERS (4.ง)
+ ======================== */
+.container {
+    /* 4.ง. Container */
+    max-width: 1200px; /* max-width */
+    margin: 0 auto; /* center */
+    padding: 2.5rem 1.25rem; /* 40px 20px - padding horizontal/vertical */
+}
+
+.section {
+    /* 1.ค. .section สำหรับจัดระยะห่าง sections */
+    padding: 2.5rem 0; /* 40px vertical spacing */
+    margin-bottom: 2rem;
+}
+
+/* ========================
+ COMPONENTS (HEADER, NAV, FOOTER, CARD, BTN)
+ ======================== */
+
+/* 1.ง. #header styling (4.ก, 5.ก) */
+#header {
+    background-color: var(--primary-color);
+    color: var(--text-light);
+    padding: 1rem 0;
+    position: sticky; /* 5.ก. Sticky Header */
+    top: 0; /* ตั้ง sticky ติดเมื่อ scroll ไปถึง */
+    z-index: 100; /* 5.ง. z-index */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+#header nav ul {
+    list-style: none;
+    display: flex; /* 6.ก. Navigation Menu Layout */
+    justify-content: center; /* จัดกึ่งกลาง nav */
+    align-items: center;
+    padding: 0;
+}
+
+#header nav ul li a {
+    color: var(--text-light);
+    padding: 0.75rem 1rem; /* 4.ก. padding */
+    display: block;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+#header nav ul li a:hover { /* 1.จ. Pseudo-class :hover & 7.ค. Navigation Menu Hover */
+    background-color: rgba(255, 255, 255, 0.2);
+    color: var(--secondary-color);
+    text-decoration: none;
+}
+
+/* 1.ง. #footer styling (4.จ) */
+#footer {
+    background-color: var(--accent-color); /* 4.จ. background-color: สีเข้มต่าง content */
+    color: var(--text-light);
+    padding: 2rem 1.25rem; /* 4.จ. padding: 30px 20px */
+    text-align: center;
+    margin-top: 3rem; /* 4.จ. margin-top */
+}
+
+#footer a {
+    color: var(--secondary-color);
+}
+
+#footer nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+/* 1.ค. .hero styling (4.ข, 5.ข, 2.ง) */
+.hero {
+    /* ในโค้ด HTML ของคุณไม่มีการใช้ภาพพื้นหลังตรงๆ แต่เราจะจำลองด้วยสีและขนาด */
+    background-image: url('Picture/Back.jpg');
+    background-size: cover; /* สั่งให้รูปภาพขยายเต็มพื้นที่ Hero โดยไม่ผิดสัดส่วน */
+    background-position: center center; /* จัดรูปภาพให้อยู่ตรงกลางทั้งแนวตั้งและแนวนอน */
+    background-repeat: no-repeat; /* ป้องกันไม่ให้รูปภาพซ้ำกัน */
+    height: 60vh; /* 2.ง. Hero section: height: 100vh; (ลดลงเหลือ 60vh เพื่อไม่ให้ใหญ่ไป) */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 3.75rem 1.25rem; /* 4.ข. padding: 60px 20px */
+    position: relative; /* 5.ข. position: relative; */
+}
+
+.hero h1 {
+    font-size: clamp(2.5rem, 5vw, 4rem); /* 2.ง. Font size responsive */
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4); /* 3.ค. text-shadow */
+}
+
+.hero h2 {
+    color: var(--text-light);
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.hero img {
+    width: 60%; /* 2.ค. ปรับขนาดภาพโลโก้ */
+    max-width: 200px;
+    height: auto;
+    margin: 1rem auto 0;
+}
+
+/* 1.ค. .card styling (4.ค) */
+.card {
+    /* 4.ค. Card Component */
+    background-color: var(--text-light);
+    padding: 1.25rem; /* 4.ค. padding: 20px (content padding) */
+    margin-bottom: 1rem; /* 4.ค. margin: 10px 0 */
+    border: 1px solid var(--border-color); /* 4.ค. border */
+    border-radius: 8px; /* 4.ค. border-radius */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* 4.ค. box-shadow */
+    transition: all 0.3s ease;
+}
+
+.card:hover { /* 7.ข. Card Hover Effects */
+    transform: translateY(-5px); /* เลื่อนขึ้นเล็กน้อย */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* 1.ค. .btn styling (7.ก) */
+.btn {
+    /* 1.ค. .btn สำหรับ buttons */
+    display: inline-block;
+    padding: 0.75rem 1.5rem; /* padding */
+    background-color: var(--secondary-color); /* background */
+    color: var(--text-dark);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: all 0.3s ease; /* 7.ก. transition */
+}
+
+.btn:hover { /* 7.ก. Button Hover Effects */
+    background-color: #E0B426; /* darker */
+    transform: translateY(-2px); /* Button เลื่อนขึ้น */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); /* เพิ่ม box-shadow */
+}
+
+.btn:active { /* 1.จ. Pseudo-class :active */
+    transform: translateY(0);
+    box-shadow: none;
+    background-color: #CCAA22;
+}
+
+/* ========================
+ LAYOUT SYSTEMS (6)
+ ======================== */
+
+/* 6.ข. 3-Column Services Layout */
+.card img {
+    width: 600; 
+    height: auto;
+    display: block;
+    margin: 0 auto 1rem;
+}
+
+.card-grid {
+    display: flex;
+    gap: 1.25rem; /* 20px */
+    flex-wrap: wrap; /* เพื่อให้รองรับ responsive */
+    justify-content: center;
+}
+
+.card-grid .card {
+    /* flex: 1; ทำให้ขยาย/หดตัวได้ */
+    flex: 1 1 300px; /* 6.ข. min-width: 300px; */
+    min-width: 300px;
+}
+
+/* 6.ค. Team Members Grid Layout */
+.team {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* responsive grid */
+    gap: 1.25rem;
+    margin-top: 2rem;
+}
+
+.team-member {
+    /* card styling */
+    text-align: center;
+    list-style: none;
+}
+
+/* 6.ง. Form Layout (Contact Page) */
+.contact-form {
+    background-color: var(--text-light);
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.form-fieldset {
+    border: 1px solid var(--border-color);
+    padding: 1.5rem;
+    border-radius: 4px;
+}
+
+.form-fieldset legend {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--primary-color);
+    padding: 0 0.5rem;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+    display: flex; /* 6.ง. display: flex; */
+    flex-direction: column; /* 6.ง. flex-direction: column; สำหรับ form fields */
+    gap: 0.5rem; /* 15px ระยะห่าง inputs */
+}
+
+.form-group label {
+    font-weight: 600;
+    color: var(--accent-color);
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="date"],
+.form-group select,
+.form-group textarea {
+    width: 100%; /* 6.ง. Input styling: width: 100%; */
+    padding: 0.75rem; /* padding: 10px; */
+    border: 1px solid var(--border-color); /* border */
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+.form-radio-group {
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+}
+
+.form-radio-group label {
+    font-weight: normal;
+}
+
+.form-checkbox {
+    flex-direction: row;
+    align-items: center;
+}
+
+/* List Styling (1.จ. :first-child) */
+.working-hours-info ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 1rem;
+}
+
+.working-hours-info ul li {
+    padding: 0.5rem 0;
+    border-bottom: 1px dashed var(--border-color);
+}
+
+.working-hours-info ul li:first-child {
+    border-top: 1px dashed var(--border-color);
+}
+
+/* Table Styling */
+#package-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+}
+
+#package-table th,
+#package-table td {
+    padding: 0.75rem;
+    text-align: left;
+    border: 1px solid var(--border-color);
+}
+
+#package-table thead th {
+    background-color: var(--primary-color);
+    color: var(--text-light);
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+#package-table tbody tr:nth-child(even) { /* 1.จ. :nth-child(even) */
+    background-color: #F8F8F8;
+}
+
+#package-table tbody tr:hover {
+    background-color: #EFEFEF;
+}
+
+/* ========================
+ RESPONSIVE / MEDIA QUERIES
+ ======================== */
+
+/* สำหรับหน้าจอขนาดเล็ก (มือถือ) */
+@media (max-width: 768px) {
+    /* ปรับขนาดตัวอักษรหลัก */
+    h1 {
+        font-size: 2rem;
+    }
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    /* ปรับ padding ของ container */
+    .container {
+        padding: 1.5rem 1rem;
+    }
+
+    /* ปรับ Nav bar เป็น column ในมือถือ (Optional: แต่ถ้าไม่แก้ flexbox ใน #header nav ul จะดีกว่า) */
+    #header nav ul {
+        flex-direction: column;
+    }
+    #header nav ul li a {
+        padding: 0.5rem 1rem;
+    }
+
+    /* ปรับ Card Grid ให้เต็มความกว้าง */
+    .card-grid .card {
+        flex: 1 1 100%; /* เต็มความกว้างในมือถือ */
+    }
+
+    .form-radio-group {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+    }
+}
